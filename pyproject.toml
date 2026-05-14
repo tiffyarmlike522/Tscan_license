@@ -20,8 +20,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/"
-Documentation = "https://github.com/"
+Homepage = "https://github.com/hntngoctu1/Tscan_license"
+Documentation = "https://github.com/hntngoctu1/Tscan_license/blob/main/docs/TECHNICAL_DESIGN.md"
 
 [tool.tspace_scan]
 app_name = "T-Space License Risk Scanner"

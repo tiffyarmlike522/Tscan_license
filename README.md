@@ -4,6 +4,8 @@ Windows desktop beta for installed-software inventory, license classification, a
 
 Tscan License helps IT admins inventory Windows software, separate free/open-source/runtime/driver components from license-review applications, and export reports for software asset management.
 
+Download beta builds from [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases).
+
 > Beta notice: findings are risk indicators, not proof of unauthorized software. Always verify license status with vendor portals, procurement records, contracts, or internal entitlement systems.
 
 ## What The Professional Prototype Does
