@@ -1,0 +1,41 @@
+name: Build Windows EXE
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyInstaller
+        run: python -m pip install --upgrade pip pyinstaller
+
+      - name: Run tests
+        run: |
+          python -m unittest discover -s tests
+          python -m compileall src run_app.py tests
+          python .\run_app.py --smoke-test
+
+      - name: Build executable
+        run: |
+          pyinstaller --clean --noconfirm --onefile --windowed --name TSpaceScan --paths src --add-data "data\license_rules.json;data" run_app.py
+          Get-FileHash -Algorithm SHA256 .\dist\TSpaceScan.exe | Tee-Object -FilePath .\dist\TSpaceScan.exe.sha256.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TSpaceScan-windows
+          path: |
+            dist/TSpaceScan.exe
+            dist/TSpaceScan.exe.sha256.txt

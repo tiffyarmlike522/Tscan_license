@@ -1,0 +1,28 @@
+[project]
+name = "tscan-license"
+version = "0.2.0-beta"
+description = "Windows installed-software inventory and license-risk scanner."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "T-Space Scan contributors" }
+]
+keywords = ["windows", "software-inventory", "license-compliance", "sam", "desktop"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Win32 (MS Windows)",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3",
+  "Topic :: System :: Systems Administration"
+]
+
+[project.urls]
+Homepage = "https://github.com/"
+Documentation = "https://github.com/"
+
+[tool.tspace_scan]
+app_name = "T-Space License Risk Scanner"
+release_channel = "beta"

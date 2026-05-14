@@ -1,0 +1,295 @@
+{
+  "known_software": [
+    {
+      "name_contains": ["microsoft 365", "microsoft office", "office 365", "visio", "microsoft project"],
+      "license_type": "Subscription-based",
+      "confidence": 84,
+      "explanation": "Microsoft Office/Microsoft 365 business products usually require a commercial license or subscription."
+    },
+    {
+      "name_contains": ["adobe photoshop", "photoshop", "adobe illustrator", "adobe premiere", "adobe after effects", "lightroom"],
+      "license_type": "Subscription-based",
+      "confidence": 86,
+      "explanation": "Adobe Creative Cloud products usually require an active subscription."
+    },
+    {
+      "name_contains": ["adobe acrobat pro", "acrobat pro"],
+      "license_type": "Subscription-based",
+      "confidence": 84,
+      "explanation": "Adobe Acrobat Pro is commonly licensed as a commercial/subscription product."
+    },
+    {
+      "name_contains": ["adobe acrobat reader", "acrobat reader", "adobe reader"],
+      "license_type": "Freeware",
+      "confidence": 82,
+      "explanation": "Adobe Acrobat Reader is commonly distributed as a free PDF reader."
+    },
+    {
+      "name_contains": ["autocad", "autodesk revit", "autodesk inventor", "autodesk 3ds max", "autodesk maya"],
+      "license_type": "Subscription-based",
+      "confidence": 86,
+      "explanation": "Autodesk professional products usually require a commercial subscription."
+    },
+    {
+      "name_contains": ["solidworks", "catia", "archicad"],
+      "license_type": "Paid software",
+      "confidence": 82,
+      "explanation": "Professional CAD/engineering software usually requires a commercial license."
+    },
+    {
+      "name_contains": ["foxit pdf reader", "foxit reader"],
+      "license_type": "Freemium",
+      "confidence": 76,
+      "explanation": "Foxit Reader is commonly free/freemium; paid editions should be checked separately."
+    },
+    {
+      "name_contains": ["foxit pdf editor", "foxit phantompdf"],
+      "license_type": "Paid software",
+      "confidence": 82,
+      "explanation": "Foxit PDF Editor/PhantomPDF usually requires a commercial license."
+    },
+    {
+      "name_contains": ["vmware workstation"],
+      "license_type": "Subscription-based",
+      "confidence": 76,
+      "explanation": "VMware Workstation commercial editions usually require a paid license/subscription."
+    },
+    {
+      "name_contains": ["winrar"],
+      "license_type": "Trial software",
+      "confidence": 78,
+      "explanation": "WinRAR is commonly distributed as trialware/commercial software."
+    },
+    {
+      "name_contains": ["winzip"],
+      "license_type": "Paid software",
+      "confidence": 80,
+      "explanation": "WinZip usually requires a commercial license."
+    },
+    {
+      "name_contains": ["jetbrains", "intellij idea ultimate", "pycharm professional", "webstorm", "rider", "datagrip"],
+      "license_type": "Subscription-based",
+      "confidence": 80,
+      "explanation": "Commercial JetBrains IDE editions are usually subscription-based."
+    },
+    {
+      "name_contains": ["pycharm community", "intellij idea community"],
+      "license_type": "Open-source software",
+      "confidence": 78,
+      "explanation": "JetBrains community editions are commonly distributed as free/open-source IDE editions."
+    },
+    {
+      "name_contains": ["visual studio code", "vscode"],
+      "license_type": "Freeware",
+      "confidence": 78,
+      "explanation": "VS Code stable builds are commonly distributed free of charge."
+    },
+    {
+      "name_contains": ["visual studio community"],
+      "license_type": "Freemium",
+      "confidence": 74,
+      "explanation": "Visual Studio Community is free for eligible use cases but has license terms for organizations."
+    },
+    {
+      "name_contains": ["visual studio professional", "visual studio enterprise"],
+      "license_type": "Subscription-based",
+      "confidence": 80,
+      "explanation": "Visual Studio Professional/Enterprise usually requires a commercial subscription/license."
+    },
+    {
+      "name_contains": ["python"],
+      "license_type": "Open-source software",
+      "confidence": 82,
+      "explanation": "Python is commonly distributed under the Python Software Foundation License."
+    },
+    {
+      "name_contains": ["node.js", "nodejs", "node js"],
+      "license_type": "Open-source software",
+      "confidence": 82,
+      "explanation": "Node.js is commonly distributed as open-source software."
+    },
+    {
+      "name_contains": ["npm", "bun", "postgresql", "wsl"],
+      "license_type": "Open-source software",
+      "confidence": 78,
+      "explanation": "Matched a common open-source developer/runtime component."
+    },
+    {
+      "name_contains": ["git version", "git ", "git-lfs", "git lfs"],
+      "license_type": "Open-source software",
+      "confidence": 80,
+      "explanation": "Git tooling is commonly open-source."
+    },
+    {
+      "name_contains": ["github cli", "opencode"],
+      "license_type": "Open-source software",
+      "confidence": 76,
+      "explanation": "Matched a common open-source developer tool."
+    },
+    {
+      "name_contains": ["docker desktop"],
+      "license_type": "Freemium",
+      "confidence": 72,
+      "explanation": "Docker Desktop has free and paid licensing tiers depending on organization size/use."
+    },
+    {
+      "name_contains": ["github desktop"],
+      "license_type": "Open-source software",
+      "confidence": 74,
+      "explanation": "GitHub Desktop is commonly distributed as an open-source desktop app."
+    },
+    {
+      "name_contains": ["7-zip", "7zip"],
+      "license_type": "Open-source software",
+      "confidence": 88,
+      "explanation": "7-Zip is commonly distributed under open-source licenses."
+    },
+    {
+      "name_contains": ["vlc media player", "videolan"],
+      "license_type": "Open-source software",
+      "confidence": 88,
+      "explanation": "VLC is a well-known open-source media player."
+    },
+    {
+      "name_contains": ["notepad++", "notepadplusplus", "winscp", "filezilla", "obs studio", "rustdesk"],
+      "license_type": "Open-source software",
+      "confidence": 80,
+      "explanation": "Matched a common open-source desktop application."
+    },
+    {
+      "name_contains": ["google chrome", "microsoft edge", "brave", "opera browser", "vivaldi"],
+      "license_type": "Freeware",
+      "confidence": 78,
+      "explanation": "Common desktop browser distributed free of charge."
+    },
+    {
+      "name_contains": ["mozilla firefox", "firefox"],
+      "license_type": "Open-source software",
+      "confidence": 82,
+      "explanation": "Firefox is commonly distributed as open-source software."
+    },
+    {
+      "name_contains": ["telegram desktop", "telegram"],
+      "license_type": "Freeware",
+      "confidence": 74,
+      "explanation": "Telegram Desktop is commonly distributed free of charge."
+    },
+    {
+      "name_contains": ["viber", "zalo", "zoom", "discord", "skype"],
+      "license_type": "Freemium",
+      "confidence": 70,
+      "explanation": "Communication app commonly distributed as free/freemium software."
+    },
+    {
+      "name_contains": ["bluestacks", "capcut", "camo studio", "kiro", "windsurf"],
+      "license_type": "Freemium",
+      "confidence": 68,
+      "explanation": "Matched a common consumer/developer freemium application."
+    },
+    {
+      "name_contains": ["microsoft teams", "teams machine-wide installer"],
+      "license_type": "Freemium",
+      "confidence": 72,
+      "explanation": "Microsoft Teams is commonly bundled with Microsoft 365/free tiers; tenant licensing may apply."
+    },
+    {
+      "name_contains": ["anydesk"],
+      "license_type": "Freemium",
+      "confidence": 74,
+      "explanation": "AnyDesk has free/personal and paid commercial licensing tiers."
+    },
+    {
+      "name_contains": ["ultraviewer"],
+      "license_type": "Freemium",
+      "confidence": 68,
+      "explanation": "UltraViewer is commonly distributed as free/freemium remote access software."
+    },
+    {
+      "name_contains": ["nvidia", "geforce experience", "nvidia app", "nvidia graphics driver", "nvidia control panel"],
+      "license_type": "Freeware",
+      "confidence": 70,
+      "explanation": "NVIDIA drivers/utilities are normally free hardware-support software, not primary license-risk apps."
+    },
+    {
+      "name_contains": ["intel driver", "intel graphics", "realtek", "amd software", "logitech options"],
+      "license_type": "Freeware",
+      "confidence": 68,
+      "explanation": "Common hardware driver/utility distributed free of charge."
+    },
+    {
+      "name_contains": ["ricoh device software manager", "device software manager"],
+      "license_type": "Freeware",
+      "confidence": 66,
+      "explanation": "Common device/hardware utility distributed free of charge."
+    },
+    {
+      "name_contains": ["microsoft visual c++", "visual c++ redistributable", ".net runtime", ".net sdk", "windows desktop runtime", "sql server management studio"],
+      "license_type": "Freeware",
+      "confidence": 72,
+      "explanation": "Common Microsoft runtime/redistributable component."
+    },
+    {
+      "name_contains": ["windows defender", "windows mail", "windows media player", "windows photo viewer", "windows kits"],
+      "license_type": "Freeware",
+      "confidence": 65,
+      "explanation": "Windows built-in or Microsoft system component."
+    }
+  ],
+  "publisher_rules": [
+    {
+      "publisher_contains": ["python software foundation", "node.js foundation", "openjs foundation", "apache software foundation", "document foundation", "videolan"],
+      "license_type": "Open-source software",
+      "confidence": 76
+    },
+    {
+      "publisher_contains": ["mozilla"],
+      "license_type": "Open-source software",
+      "confidence": 74
+    },
+    {
+      "publisher_contains": ["adobe", "autodesk", "corel", "solidworks", "dassault", "jetbrains", "vmware"],
+      "license_type": "Subscription-based",
+      "confidence": 68
+    },
+    {
+      "publisher_contains": ["google llc", "telegram", "viber media", "zalo group", "nvidia", "intel corporation", "realtek", "logitech"],
+      "license_type": "Freeware",
+      "confidence": 62
+    },
+    {
+      "publisher_contains": ["docker inc.", "bytedance", "now.gg", "reincubate", "amazon web services", "codeium"],
+      "license_type": "Freemium",
+      "confidence": 60
+    },
+    {
+      "publisher_contains": ["postgresql global development group", "github, inc.", "opencode"],
+      "license_type": "Open-source software",
+      "confidence": 72
+    },
+    {
+      "publisher_contains": ["microsoft corporation"],
+      "license_type": "Freeware",
+      "confidence": 50
+    }
+  ],
+  "license_text_rules": [
+    {
+      "contains": ["mit license", "apache license", "gnu general public license", "gpl", "mozilla public license", "bsd license"],
+      "license_type": "Open-source software",
+      "confidence": 86,
+      "explanation": "License file contains a recognized open-source license marker."
+    },
+    {
+      "contains": ["end user license agreement", "eula", "commercial license"],
+      "license_type": "Paid software",
+      "confidence": 55,
+      "explanation": "License file contains commercial/EULA language."
+    },
+    {
+      "contains": ["trial", "evaluation period", "evaluation license"],
+      "license_type": "Trial software",
+      "confidence": 65,
+      "explanation": "License file contains trial/evaluation language."
+    }
+  ]
+}
