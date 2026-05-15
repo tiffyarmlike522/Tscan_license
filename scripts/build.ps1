@@ -1,3 +1,7 @@
+param(
+    [switch]$Portable
+)
+
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $PSScriptRoot
 Set-Location $Root
@@ -12,23 +16,62 @@ if (-not (Test-Path ".\.venv\Scripts\python.exe")) {
 Get-Process -Name TscanLicense -ErrorAction SilentlyContinue | Stop-Process -Force
 Get-Process -Name TSpaceScan -ErrorAction SilentlyContinue | Stop-Process -Force
 
-.\.venv\Scripts\pyinstaller.exe `
-    --clean `
-    --noconfirm `
-    --onefile `
-    --windowed `
-    --name TscanLicense `
-    --paths src `
-    --add-data "data\license_rules.json;data" `
-    run_app.py
+foreach ($target in @(
+    (Join-Path $Root "dist\TscanLicense"),
+    (Join-Path $Root "dist\TscanLicense.exe"),
+    (Join-Path $Root "dist\TscanLicensePortable.exe"),
+    (Join-Path $Root "dist\TscanLicenseSetup.exe"),
+    (Join-Path $Root "dist\TscanLicense.exe.sha256.txt"),
+    (Join-Path $Root "dist\TscanLicensePortable.exe.sha256.txt"),
+    (Join-Path $Root "dist\TscanLicenseSetup.exe.sha256.txt")
+)) {
+    if (Test-Path -LiteralPath $target) {
+        Remove-Item -LiteralPath $target -Recurse -Force
+    }
+}
 
-$exe = Join-Path $Root "dist\TscanLicense.exe"
+$commonArgs = @(
+    "--clean",
+    "--noconfirm",
+    "--windowed",
+    "--name",
+    "TscanLicense",
+    "--paths",
+    "src",
+    "--add-data",
+    "data\license_rules.json;data",
+    "run_app.py"
+)
+
+.\.venv\Scripts\pyinstaller.exe @commonArgs
+
+$exe = Join-Path $Root "dist\TscanLicense\TscanLicense.exe"
 if (-not (Test-Path $exe)) {
     throw "Build failed: $exe was not created."
 }
 
-Write-Host "Built $exe"
+Write-Host "Built installed app $exe"
 Get-FileHash -Algorithm SHA256 $exe
+
+if ($Portable) {
+    .\.venv\Scripts\pyinstaller.exe `
+    --clean `
+    --noconfirm `
+    --onefile `
+    --windowed `
+    --name TscanLicensePortable `
+    --paths src `
+    --add-data "data\license_rules.json;data" `
+    run_app.py
+
+    $portableExe = Join-Path $Root "dist\TscanLicensePortable.exe"
+    if (-not (Test-Path $portableExe)) {
+        throw "Build failed: $portableExe was not created."
+    }
+
+    Write-Host "Built portable app $portableExe"
+    Get-FileHash -Algorithm SHA256 $portableExe
+}
 
 $iscc = Get-Command iscc.exe -ErrorAction SilentlyContinue
 $isccPath = if ($iscc) { $iscc.Source } else { "" }

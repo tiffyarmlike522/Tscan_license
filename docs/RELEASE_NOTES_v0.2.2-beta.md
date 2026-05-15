@@ -1,13 +1,16 @@
-# Tscan License v0.2.1-beta
+# Tscan License v0.2.2-beta
 
 Free Windows software license scanner for installed-software inventory, software asset management, and license-compliance risk review.
 
 ## Download
 
-- `TscanLicense.exe` - portable one-file app. Download and double-click to run.
-- `TscanLicenseSetup.exe` - optional installer with Start Menu shortcut and uninstaller.
+- `TscanLicenseSetup.exe` - recommended one-file installer with Start Menu shortcut and uninstaller.
 
 No Python or terminal is required for normal users.
+
+## Why This Release Uses An Installer
+
+This release uses a normal installer built from a PyInstaller `onedir` application instead of publishing a PyInstaller `onefile` portable executable as the primary download. This is intended to reduce antivirus false positives from self-extracting one-file executables.
 
 ## Highlights
 
@@ -27,4 +30,4 @@ No Python or terminal is required for normal users.
 
 ## Known Limitation
 
-This beta build is not code-signed yet, so Windows SmartScreen may warn on first run.
+This beta build is not code-signed yet, so Windows SmartScreen or antivirus products may still warn until the project builds reputation or the binaries are code-signed.

@@ -4,20 +4,21 @@ Free Windows software license scanner for installed-software inventory, software
 
 Tscan License helps IT admins inventory Windows software, separate free/open-source/runtime/driver components from license-review applications, and export reports for software asset management.
 
-Download the one-file portable app or installer from [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases).
+Download the one-file installer from [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases).
 
 ## Download For Normal Users
 
-Use this option if you only want to run the app:
+Use this option if you only want to install and run the app:
 
 1. Open [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases/latest).
-2. Download `TscanLicense.exe`.
-3. Double-click `TscanLicense.exe`.
-4. Press **Scan**.
+2. Download `TscanLicenseSetup.exe`.
+3. Double-click `TscanLicenseSetup.exe`.
+4. Open **Tscan License** from the Start Menu.
+5. Press **Scan**.
 
-No Python, terminal, or setup step is required. The app stores its local database and logs under `%LOCALAPPDATA%\T-SpaceScan\`.
+No Python or terminal is required. The app stores its local database and logs under `%LOCALAPPDATA%\T-SpaceScan\`.
 
-Alternative: download `TscanLicenseSetup.exe` if you want a Start Menu shortcut and Windows uninstaller.
+Portable one-file builds can be created by developers with `.\scripts\build.ps1 -Portable`, but the installer is recommended for public users because portable PyInstaller one-file apps are more likely to trigger antivirus false positives.
 
 > Beta notice: findings are risk indicators, not proof of unauthorized software. Always verify license status with vendor portals, procurement records, contracts, or internal entitlement systems.
 
@@ -42,7 +43,6 @@ The scanner reports signals, not proof of piracy. It intentionally does not crac
 For normal users, download from [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases):
 
 - `TscanLicenseSetup.exe`: recommended installer with Start Menu shortcut and uninstaller.
-- `TscanLicense.exe`: portable single-file app, no installation required.
 
 Then double-click the downloaded file and press **Scan**.
 
@@ -110,13 +110,19 @@ Build the Windows executable:
 The built file is:
 
 ```text
-dist\TscanLicense.exe
+dist\TscanLicense\TscanLicense.exe
 ```
 
-If Inno Setup is installed, the build script also creates:
+If Inno Setup is installed, the build script creates the public download:
 
 ```text
 dist\TscanLicenseSetup.exe
+```
+
+Developers can also build an experimental portable one-file executable:
+
+```powershell
+.\scripts\build.ps1 -Portable
 ```
 
 For a commercial product, prefer a signed installer, auto-update, MSIX/MSI packaging, and enterprise policy support.
@@ -127,7 +133,7 @@ Recommended deployment options:
 
 - Small team: send the GitHub Release link and ask users to install `TscanLicenseSetup.exe`.
 - IT-managed PCs: deploy the installer with Intune, GPO, PDQ Deploy, SCCM, or RMM.
-- Portable audit: run `TscanLicense.exe` from a shared IT folder.
+- Portable audit: build with `.\scripts\build.ps1 -Portable` and test against your security baseline before use.
 
 The current beta is not code-signed, so Windows SmartScreen may show a warning on first run.
 

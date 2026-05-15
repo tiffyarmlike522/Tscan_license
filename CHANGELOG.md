@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.2-beta
+
+- Made `TscanLicenseSetup.exe` the recommended public one-file download.
+- Switched installer packaging to use a PyInstaller `onedir` app to reduce antivirus false positives compared with PyInstaller `onefile`.
+- Kept portable one-file builds as an explicit developer option via `.\scripts\build.ps1 -Portable`.
+- Removed suspicious PowerShell `ExecutionPolicy Bypass` usage from digital signature checks.
+- Added antivirus false-positive documentation.
+
 ## 0.2.1-beta
 
 - Added `TscanLicense.exe` as the main portable one-file download name for normal users.
