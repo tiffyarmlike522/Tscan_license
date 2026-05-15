@@ -1,7 +1,7 @@
 #define MyAppName "Tscan License"
 #define MyAppVersion "0.2.0-beta"
 #define MyAppPublisher "T-Space Scan contributors"
-#define MyAppExeName "TSpaceScan.exe"
+#define MyAppExeName "TscanLicense.exe"
 
 [Setup]
 AppId={{C4438B4E-49F7-4F0E-82E9-A84542A9FB6E}
@@ -34,6 +34,8 @@ Source: "..\dist\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\README.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\SECURITY.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\PRIVACY.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\DISCLAIMER.md"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\Tscan License"; Filename: "{app}\{#MyAppExeName}"

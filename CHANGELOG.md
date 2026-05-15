@@ -2,6 +2,9 @@
 
 ## 0.2.0-beta
 
+- Added `TscanLicense.exe` as the main portable one-file download name for normal users.
+- Added installer packaging through Inno Setup.
+- Added privacy, disclaimer, release notes, and GitHub issue templates for public beta use.
 - Added professional dashboard layout with metrics, charts, filters, history, compare, settings, and detail panel.
 - Added app grouping: license review, work apps, free/open-source, freemium, developer/runtime, driver/hardware, system/helper, unknown.
 - Added license priority labels: Review, Review now, No action, Track terms, Inventory, Identify.

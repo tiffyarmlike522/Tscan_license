@@ -8,7 +8,17 @@ license = "MIT"
 authors = [
   { name = "T-Space Scan contributors" }
 ]
-keywords = ["windows", "software-inventory", "license-compliance", "sam", "desktop"]
+keywords = [
+  "windows",
+  "software-inventory",
+  "software-license-scanner",
+  "software-license-audit",
+  "software-asset-management",
+  "license-compliance",
+  "license-risk-scanner",
+  "sam",
+  "desktop"
+]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Environment :: Win32 (MS Windows)",

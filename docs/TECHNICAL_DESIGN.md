@@ -414,7 +414,7 @@ python -m compileall src run_app.py tests
 
 ```powershell
 python -m pip install pyinstaller
-pyinstaller --noconsole --name TSpaceScan .\run_app.py
+pyinstaller --noconsole --name TscanLicense .\run_app.py
 ```
 
 ### Dong goi C# ban thuong mai

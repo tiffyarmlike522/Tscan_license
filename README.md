@@ -1,10 +1,23 @@
 # Tscan License
 
-Windows desktop beta for installed-software inventory, license classification, and license-compliance risk signaling.
+Free Windows software license scanner for installed-software inventory, software asset management, license classification, and license-compliance risk signaling.
 
 Tscan License helps IT admins inventory Windows software, separate free/open-source/runtime/driver components from license-review applications, and export reports for software asset management.
 
-Download beta builds from [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases).
+Download the one-file portable app or installer from [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases).
+
+## Download For Normal Users
+
+Use this option if you only want to run the app:
+
+1. Open [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases/latest).
+2. Download `TscanLicense.exe`.
+3. Double-click `TscanLicense.exe`.
+4. Press **Scan**.
+
+No Python, terminal, or setup step is required. The app stores its local database and logs under `%LOCALAPPDATA%\T-SpaceScan\`.
+
+Alternative: download `TscanLicenseSetup.exe` if you want a Start Menu shortcut and Windows uninstaller.
 
 > Beta notice: findings are risk indicators, not proof of unauthorized software. Always verify license status with vendor portals, procurement records, contracts, or internal entitlement systems.
 
@@ -29,7 +42,7 @@ The scanner reports signals, not proof of piracy. It intentionally does not crac
 For normal users, download from [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases):
 
 - `TscanLicenseSetup.exe`: recommended installer with Start Menu shortcut and uninstaller.
-- `TSpaceScan.exe`: portable single-file app, no installation required.
+- `TscanLicense.exe`: portable single-file app, no installation required.
 
 Then double-click the downloaded file and press **Scan**.
 
@@ -97,7 +110,7 @@ Build the Windows executable:
 The built file is:
 
 ```text
-dist\TSpaceScan.exe
+dist\TscanLicense.exe
 ```
 
 If Inno Setup is installed, the build script also creates:
@@ -114,9 +127,13 @@ Recommended deployment options:
 
 - Small team: send the GitHub Release link and ask users to install `TscanLicenseSetup.exe`.
 - IT-managed PCs: deploy the installer with Intune, GPO, PDQ Deploy, SCCM, or RMM.
-- Portable audit: run `TSpaceScan.exe` from a shared IT folder.
+- Portable audit: run `TscanLicense.exe` from a shared IT folder.
 
 The current beta is not code-signed, so Windows SmartScreen may show a warning on first run.
+
+## Search Keywords
+
+Tscan License is relevant for people searching for a Windows software license scanner, software license audit tool, software asset management scanner, installed software inventory tool, license compliance checker, license risk scanner, phần mềm quét bản quyền, kiểm kê phần mềm Windows, quản lý bản quyền phần mềm, and công cụ kiểm tra rủi ro license.
 
 ## Privacy And Safety
 

@@ -9,6 +9,7 @@ if (-not (Test-Path ".\.venv\Scripts\python.exe")) {
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install pyinstaller
 
+Get-Process -Name TscanLicense -ErrorAction SilentlyContinue | Stop-Process -Force
 Get-Process -Name TSpaceScan -ErrorAction SilentlyContinue | Stop-Process -Force
 
 .\.venv\Scripts\pyinstaller.exe `
@@ -16,12 +17,12 @@ Get-Process -Name TSpaceScan -ErrorAction SilentlyContinue | Stop-Process -Force
     --noconfirm `
     --onefile `
     --windowed `
-    --name TSpaceScan `
+    --name TscanLicense `
     --paths src `
     --add-data "data\license_rules.json;data" `
     run_app.py
 
-$exe = Join-Path $Root "dist\TSpaceScan.exe"
+$exe = Join-Path $Root "dist\TscanLicense.exe"
 if (-not (Test-Path $exe)) {
     throw "Build failed: $exe was not created."
 }

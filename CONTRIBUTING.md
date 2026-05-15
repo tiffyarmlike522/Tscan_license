@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve T-Space Scan.
+Thanks for helping improve Tscan License.
 
 ## Development Setup
 

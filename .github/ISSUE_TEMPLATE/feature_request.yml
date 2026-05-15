@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest a product improvement or scanner rule.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What problem should this solve?
+      description: Explain the workflow or scanner gap.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the feature, rule, or UI improvement.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Scanner
+        - License classifier
+        - Risk analyzer
+        - Reports
+        - UI/UX
+        - Packaging
+        - Documentation
+        - Other
+    validations:
+      required: true

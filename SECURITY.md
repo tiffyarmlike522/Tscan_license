@@ -2,7 +2,7 @@
 
 ## Scope
 
-T-Space Scan is a local Windows software inventory and license-risk scanner. It is designed to collect installed-software metadata and risk indicators for IT/software asset management.
+Tscan License is a local Windows software inventory and license-risk scanner. It is designed to collect installed-software metadata and risk indicators for IT/software asset management.
 
 The tool must not be used to crack, bypass, patch, remove activation, harvest license keys, or hide unauthorized software.
 

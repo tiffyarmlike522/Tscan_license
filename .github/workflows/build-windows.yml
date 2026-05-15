@@ -29,13 +29,13 @@ jobs:
 
       - name: Build executable
         run: |
-          pyinstaller --clean --noconfirm --onefile --windowed --name TSpaceScan --paths src --add-data "data\license_rules.json;data" run_app.py
-          Get-FileHash -Algorithm SHA256 .\dist\TSpaceScan.exe | Tee-Object -FilePath .\dist\TSpaceScan.exe.sha256.txt
+          pyinstaller --clean --noconfirm --onefile --windowed --name TscanLicense --paths src --add-data "data\license_rules.json;data" run_app.py
+          Get-FileHash -Algorithm SHA256 .\dist\TscanLicense.exe | Tee-Object -FilePath .\dist\TscanLicense.exe.sha256.txt
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TSpaceScan-windows
+          name: TscanLicense-windows
           path: |
-            dist/TSpaceScan.exe
-            dist/TSpaceScan.exe.sha256.txt
+            dist/TscanLicense.exe
+            dist/TscanLicense.exe.sha256.txt
