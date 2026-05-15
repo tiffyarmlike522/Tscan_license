@@ -1,5 +1,5 @@
 #define MyAppName "Tscan License"
-#define MyAppVersion "0.2.0-beta"
+#define MyAppVersion "0.2.1-beta"
 #define MyAppPublisher "T-Space Scan contributors"
 #define MyAppExeName "TscanLicense.exe"
 

@@ -1,4 +1,4 @@
-# Tscan License v0.2.0-beta
+# Tscan License v0.2.1-beta
 
 Free Windows software license scanner for installed-software inventory, software asset management, and license-compliance risk review.
 

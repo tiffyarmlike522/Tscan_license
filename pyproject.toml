@@ -1,6 +1,6 @@
 [project]
 name = "tscan-license"
-version = "0.2.0-beta"
+version = "0.2.1-beta"
 description = "Windows installed-software inventory and license-risk scanner."
 readme = "README.md"
 requires-python = ">=3.11"
