@@ -26,7 +26,14 @@ The scanner reports signals, not proof of piracy. It intentionally does not crac
 
 ## Run
 
-Download `TSpaceScan.exe` from GitHub Releases, or run from source:
+For normal users, download from [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases):
+
+- `TscanLicenseSetup.exe`: recommended installer with Start Menu shortcut and uninstaller.
+- `TSpaceScan.exe`: portable single-file app, no installation required.
+
+Then double-click the downloaded file and press **Scan**.
+
+Run from source:
 
 ```powershell
 python .\run_app.py
@@ -93,7 +100,23 @@ The built file is:
 dist\TSpaceScan.exe
 ```
 
+If Inno Setup is installed, the build script also creates:
+
+```text
+dist\TscanLicenseSetup.exe
+```
+
 For a commercial product, prefer a signed installer, auto-update, MSIX/MSI packaging, and enterprise policy support.
+
+## For IT Deployment
+
+Recommended deployment options:
+
+- Small team: send the GitHub Release link and ask users to install `TscanLicenseSetup.exe`.
+- IT-managed PCs: deploy the installer with Intune, GPO, PDQ Deploy, SCCM, or RMM.
+- Portable audit: run `TSpaceScan.exe` from a shared IT folder.
+
+The current beta is not code-signed, so Windows SmartScreen may show a warning on first run.
 
 ## Privacy And Safety
 

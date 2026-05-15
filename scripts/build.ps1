@@ -28,3 +28,29 @@ if (-not (Test-Path $exe)) {
 
 Write-Host "Built $exe"
 Get-FileHash -Algorithm SHA256 $exe
+
+$iscc = Get-Command iscc.exe -ErrorAction SilentlyContinue
+$isccPath = if ($iscc) { $iscc.Source } else { "" }
+if (-not $isccPath) {
+    foreach ($candidate in @(
+        "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe",
+        "$env:ProgramFiles\Inno Setup 6\ISCC.exe",
+        "$env:LOCALAPPDATA\Programs\Inno Setup 6\ISCC.exe"
+    )) {
+        if ($candidate -and (Test-Path -LiteralPath $candidate)) {
+            $isccPath = $candidate
+            break
+        }
+    }
+}
+
+if ($isccPath) {
+    & $isccPath ".\installer\TscanLicense.iss"
+    $setup = Join-Path $Root "dist\TscanLicenseSetup.exe"
+    if (Test-Path $setup) {
+        Write-Host "Built $setup"
+        Get-FileHash -Algorithm SHA256 $setup
+    }
+} else {
+    Write-Host "Inno Setup compiler not found; skipped installer build."
+}
